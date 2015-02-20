@@ -6,25 +6,22 @@
 //------------------------
 
   var Menu = Backbone.Model.extend({
-    idAttribute: 'menuId',
-
+    idAttribute: 'objectId',
     defaults: function(attributes){
       attributes = attributes || {};
       return _.defaults(attributes, {
-        starters: '',
-        entrees: '',
-        curry: '',
-        other: ''
+        item_title: 'default',
+        item_description: 'default',
+        item_price: 'default',
+        item_type: 'default',
       });
     }
   });
 
-  var MenusCollection = Backbone.Collection.extend({
+  var Menus = Backbone.Collection.extend({
     model: Menu,
-    url: "https://api.parse.com/1/classes/..",
-    parse: function(food){
-      return food.results;
-    }
+    url: "https://api.parse.com/1/classes/Menu_Items",
+    parse: function(food) { return food.results; }
   });
 
 //------------------------
@@ -32,46 +29,70 @@
 //------------------------
 
   var MenuListView = Backbone.View.extend({
-    template: _.template($('[data-template-name=index]').text()),
+    el: '.sidebar',
+    template: _.template($('[data-template-name="post-li"]').text()),
 
-    render: function(){
-      this.$el.html(this.template());
-      return this;
-    },
 
     events: {
-      '': 'displayMenu'
+      'click .post-li': 'showFullPost'
     },
 
-    diaplayMenu: function(e){
-      e.preventDefault();
-      var foodItem = this.$('.food-item').val();
-      this.collection.create({});
+    showFullPost: function() {
+    },
+
+    render: function() {
+      var that = this;
+      this.collection.each(function(menu) {
+        that.$el.append( that.template( post.toJSON() ) );
+      });
+      return this;
     }
-  });
+ });
 
-  var MenuItemView = Backbone.View.extend({
 
-  });
+ var PostFullView = Backbone.View.extend({
+   tagName: 'div',
+   className: 'showPost',
+   template: _.template($('[data-template-name="showPost"]').text()),
+   render: function() {
+     this.$el.append(this.template(this.model.toJSON()));
+     return this;
+   }
+ });
 
 //------------------------
 // ROUTER //
 //------------------------
 
-  var AppRouter = Backbone.Router.extend({
-    routes: {
-      '': 'index',
-    },
+var AppRouter = Backbone.Router.extend ({
+  routes: {
+    '': 'index',
+    'showMenu/:id': 'showMenu'
+  },
 
-    index: function(){
-      var template = _.template($('[data-template-name=index]').text());
-      $('.app-wrapper').html(template());
-      console.log('index');
-      // this.listView.render();
-    }
+  initialize: function() {
+    this.menus = new Menus();
+    this.menusList = new MenuListView({collection: this.menus});
+  },
 
-  });
+  index: function(){
+    var that = this;
+    this.menus.fetch().done(function() {
+      that.menusList.render();
+    });
+  },
 
+
+  showMenu: function(id){
+    var that = this;
+    this.menus.fetch().done(function() {
+      foundModel = that.menus.get(id);
+      var menuFull = new MenuFullView({model: foundModel});
+      menuFull.render();
+      $('.full-post').html(menuFull.el);
+    });
+  }
+});
 
 //------------------------
 // CONFIGURATION //
@@ -94,3 +115,30 @@ $.ajaxSetup ({
   });
 
 })();
+
+
+
+// //------------------------
+// // VIEWS //
+// //------------------------
+//
+//   var MenuListView = Backbone.View.extend({
+//     el: '#item-info',
+//     events: {
+//       'submit': 'itemInfo'
+//     },
+//     itemInfo: function(e){
+//       e.preventDefault();
+//       var itemTitle = this.$('.itemTitleInput').val();
+//       var itemDescription = this.$('.itemDescriptionInput').val();
+//       var itemPrice = this.$('.itemPriceInput').val();
+//       var itemType = this.$('.itemTypeInput').val();
+//
+//       this.collection.create({item_title: itemTitle, item_description: itemDescription, item_price: itemPrice, item_type: itemType});
+//       this.$('.itemTitleInput').val('');
+//       this.$('.itemDescriptionInput').val('');
+//       this.$('.itemPriceInput').val('');
+//       this.$('.itemTypeInput').val('');
+//     }
+//   });
+//
