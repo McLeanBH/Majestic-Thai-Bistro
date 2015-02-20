@@ -68,18 +68,15 @@ header {
 .btn-4 {
   padding-left: 100px; }
 
-.w1-1,
-.w1-2,
-.w2-1,
-.w2-2,
-.w3-1,
-.w3-2,
-.w4-1,
-.w4-2 {
+.app-wrapper {
+  height: 650px; }
+
+.w1-1, .w1-2, .w2-1, .w2-2,
+.w3-1, .w3-2, .w4-1, .w4-2 {
   display: inline-block; }
 
 .w-one {
-  background-color: #d8cd43; }
+  height: 400px; }
 
 .w-two {
   background-color: #7bc3fd; }
