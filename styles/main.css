@@ -73,7 +73,8 @@ header {
   padding-left: 100px; }
 
 .app-wrapper {
-  height: 650px; }
+  height: 650px;
+  background-color: #7298C0; }
 
 .w1-1, .w1-2, .w2-1, .w2-2,
 .w3-1, .w3-2, .w4-1, .w4-2 {
