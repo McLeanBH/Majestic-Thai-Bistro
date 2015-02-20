@@ -50,7 +50,7 @@ header {
   height: 90px; }
   .w-zero .main-nav {
     margin: 0 auto;
-    padding-top: 45px;
+    padding-top: 25px;
     padding-left: 0;
     list-style: none;
     text-align: center; }
@@ -58,14 +58,18 @@ header {
     display: inline-block;
     margin: 0 auto; }
 
-.btn-1,
-.btn-2,
-.btn-3 {
-  padding-right: 100px; }
+.main-btns {
+  display: inline-block;
+  padding: 10px;
+  background-color: #FF5F33;
+  border: 2px solid yellow;
+  text-decoration: none;
+  color: #000;
+  font-weight: 800; }
 
-.btn-2,
-.btn-3,
-.btn-4 {
+.btn-1, .btn-2, .btn-3,
+.btn-2, .btn-3, .btn-4 {
+  padding-right: 100px;
   padding-left: 100px; }
 
 .app-wrapper {
