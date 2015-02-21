@@ -133,12 +133,12 @@ footer {
   display: inline-block;
   border: 2px solid yellow;
   background-color: #ff5f33;
-  padding: 10px;
+  padding: 5px 10px;
   text-decoration: none;
   line-height: 2;
   color: #000;
   font-family: 'Julee', cursive;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 800;
 }
 
@@ -153,6 +153,7 @@ footer {
 
 #add-btn {
   float: right;
+  margin-right: 10px;
   background-color: #fd6034;
 }
 
@@ -170,6 +171,21 @@ footer {
   text-align: center;
 }
 
+.food {
+  display: inline-block;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.menu-price {
+  padding-left: 35%;
+}
+
+.menu-add {
+  padding-left: 95%;
+}
+
 ul {
   margin: 0 auto;
+  list-style: none;
 }

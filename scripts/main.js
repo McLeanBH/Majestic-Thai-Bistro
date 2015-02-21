@@ -1,6 +1,10 @@
 (function(){
   'use strict';
-  
+
+////////////////////////////////////////////////////////////////////////////////
+//Framework: Model, Collections, Views (Pres/Interaction), Router (App State) //
+////////////////////////////////////////////////////////////////////////////////
+
   var Menu = Backbone.Model.extend({
     idAttribute: 'objectId',
     defaults: function(opts){
@@ -23,13 +27,8 @@
   var MenuListView = Backbone.View.extend({
     el: '.menu',
     template: _.template($('[data-template-name="post-li"]').text()),
-
-
     events: {
       'click .post-li': 'showMenu'
-    },
-
-    showMenu: function() {
     },
 
     render: function() {
@@ -46,6 +45,7 @@
    events: {
      'submit' : 'itemInfo'
    },
+
    itemInfo: function(e) {
      e.preventDefault();
      var itemTitle = this.$('.itemTitleInput').val();
@@ -61,21 +61,64 @@
    }
  });
 
+////////////////////////////////////////////////////////////////////////////////
+/// CART/ORDER/ITEM (model, collection, instatiated) ///////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
- var MenuFullView = Backbone.View.extend({
-   tagName: 'div',
-   className: 'showMenu',
-   template: _.template($('[data-template-name="showMenu"]').text()),
-   render: function() {
-     this.$el.append(this.template(this.model.toJSON()));
-     return this;
-   }
- });
+  //  var Item = Backbone.Model.extend({
+  //    defaults: {
+  //      title: '',
+  //      price: ''
+  //    }
+  //  });
+  //
+  //  var ItemCollection = Backbone.Collection.extend({
+  //    model: Item,
+  //    url: "https://api.parse.com/1/classes/Item",
+  //    parse: function (response) {
+  //      return response.results;
+  //    }
+  //  });
+  //
+  //  var Order = Backbone.Model.extend({
+  //    defaults: function(ats){
+  //      ats = ats || {};
+  //      return _.defaults(ats, {
+  //        items: [ ]
+  //      });
+  //    },
+   //
+  //    addItem: function(item){
+  //      this.set('items', this.get('items').concat([item.toJSON()]));
+  //    },
+   //
+  //    totalPrice: function(){
+  //      return this.get('items').reduce(function(acum, item) {
+  //        return acum + item.price;
+  //      }, 0);
+  //    }
+  //  });
+   //
+  //  var OrderCollection = Backbone.Model.extend({
+  //    model: Order,
+  //    url: "https://api.parse.com/1/classes/Order",
+  //    parse: function(response){
+  //      return response.results;
+  //    }
+  //  });
+  //
+  //  var items = new ItemCollection([{name: "Cool Food", price: 10.5}]);
+  //  var order = new Order();
+  //  // order.addItems(items.at(0));
+  //  console.log(order.totalPrice());
+
+////////////////////////////////////////////////////////////////////////////////
+/// ROUTER (APP STATE) /////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 var AppRouter = Backbone.Router.extend ({
   routes: {
-    '': 'index',
-    'showMenu/:id': 'showMenu'
+    '': 'index'
   },
 
   initialize: function() {
@@ -91,6 +134,10 @@ var AppRouter = Backbone.Router.extend ({
   },
 });
 
+////////////////////////////////////////////////////////////////////////////////
+/// CONFIGURATION //////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 $.ajaxSetup ({
   headers: {
     "X-Parse-Application-Id": "3sSDwBGBkqjPYHuD6sv7RlG7B0hUPaDgqJzFVAmb",
@@ -98,9 +145,31 @@ $.ajaxSetup ({
   }
 });
 
+////////////////////////////////////////////////////////////////////////////////
+/// GLUE CODE //////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
   $(document).ready(function(){
     window.router = new AppRouter();
     Backbone.history.start();
   });
 
 })();
+
+
+////////////////////////////////////////////////////////////////////////////////
+/// REMOMVED/SUDO CODE /////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+ //
+ // showMenu: function() {
+ // },
+ // var MenuFullView = Backbone.View.extend({
+ //   tagName: 'div',
+ //   className: 'showMenu',
+ //   template: _.template($('[data-template-name="showMenu"]').text()),
+ //   render: function() {
+ //     this.$el.append(this.template(this.model.toJSON()));
+ //     return this;
+ //   }
+ // });

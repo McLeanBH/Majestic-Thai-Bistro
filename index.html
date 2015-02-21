@@ -14,7 +14,6 @@
   </header>
 
   <div id="app-container">
-
     <div class="wrapper w-zero">
       <ul class="main-nav">
         <li class="main-btns btn-1 hvr-back-pulse"><a>Starters</a></li>
@@ -25,15 +24,19 @@
     </div> <!-- cloing 'w-zero' -->
 
     <div class="app-wrapper">
-
         <div class="menu">
-          <h1 class="menu-header">Majestic Thai: Menu</h1>
+          <h1 class="menu-header">Majestic Thai</h1>
+          <ul class="menu-nav">
+            <li class="food menu-selection">Selection</li>
+            <li class="food menu-price">Price</li>
+            <li class="food menu-add">Add To Cart</li>
+          </ul>
           <script type="text/template" data-template-name="post-li">
             <ul class=".js-items">
-              <li class="item-title post-li hvr-reveal"><%= item_title %></li>
+              <li class="item-title post-li hvr-reveal hvr-grow-rotate"><%= item_title %></li>
               <li class="item-description post-li hvr-rectangle-out"><%= item_description %></li>
-              <li class="item-price post-li hvr-underline-from-center"><%= item_price %></li>
               <li class="item-type post-li"><%= item_type %></li>
+              <li class="item-price post-li hvr-underline-from-center"><%= item_price %></li>
                <li id="add-btn" class="item-button post-li hvr-rectangle-out"><a class="add" href="checkout.html">Add<!-- <button>Add</button> --></li>
                 <hr />
             </ul>
@@ -41,10 +44,6 @@
       </div> <!-- cloing 'menu' -->
     </div> <!-- cloing 'app-wrapper' -->
   </div> <!-- cloing 'app-container' -->
-
-
-
-
 
   <div class="cart-wrapper">
     <div class="cart"></div>
@@ -83,6 +82,7 @@
   <script src="bower_components/backbone/backbone.js"></script>
 
   <script type="text/javascript" src="scripts/main.js"></script>
+
 
 </body>
 </html>
