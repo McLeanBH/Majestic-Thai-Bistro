@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <title>Majestic Thai Bistro</title>
   <link rel="stylesheet" href="bower_components/Hover/css/hover-min.css" media="all">
+  <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Julee" type="text/css">
 </head>
 <body>
@@ -27,13 +27,14 @@
     <div class="app-wrapper">
 
         <div class="menu">
+          <h1 class="menu-header">Majestic Thai: Menu</h1>
           <script type="text/template" data-template-name="post-li">
             <ul class=".js-items">
-              <li class="item-title post-li hvr-back-pulse"><%= item_title %></li>
-              <li class="item-description post-li hvr-back-pulse"><%= item_description %></li>
-              <li class="item-price post-li hvr-back-pulse"><%= item_price %></li>
-              <li class="item-type post-li hvr-back-pulse"><%= item_type %></li>
-               <li id="add-btn" class="item-button post-li hvr-back-pulse"><a class="add" href="checkout.html">Add<!-- <button>Add</button> --></li>
+              <li class="item-title post-li hvr-reveal"><%= item_title %></li>
+              <li class="item-description post-li hvr-rectangle-out"><%= item_description %></li>
+              <li class="item-price post-li hvr-underline-from-center"><%= item_price %></li>
+              <li class="item-type post-li"><%= item_type %></li>
+               <li id="add-btn" class="item-button post-li hvr-rectangle-out"><a class="add" href="checkout.html">Add<!-- <button>Add</button> --></li>
                 <hr />
             </ul>
           </script>
@@ -45,24 +46,26 @@
 
 
 
-  <!--     <div class="cart-wrapper">
+  <div class="cart-wrapper">
     <div class="cart"></div>
     <script type="text/template" data-template-name="cart-li">
-      <ul>
+      <ul class="cart-list">
         <li class="cart-item-title"><%= cart_item_title %></li><hr />
         <li class="cart-item-price"><%= cart_item_price %></li><hr />
         <li class="cart-price-total"><%= cart_price_total %></li><hr />
         <li><a class="submit go-to-checkout" href="checkout.html">Place Order and Checkout</a></li>
       </ul>
+        <hr />
+        <p>** Total price before taxes **</p>
     </script>
-  </div> cloing 'cart-wrapper' -->
+  </div>
 
   <footer>
     <div class="footer-left">
       <ul class="list-left">
-        <li class="site-map-items"><a href="one1">One1</a></li>
-        <li class="site-map-items"><a href="one2">Two2</a></li>
-        <li class="site-map-items"><a href="one3">Three3</a></li>
+        <li class="site-map-items"><a href="index.html">Home</a></li>
+        <li class="site-map-items"><a href="one2">Menu</a></li>
+        <li class="site-map-items"><a href="one3">Cart</a></li>
       </ul>
     </div> <!-- 'footer-left' -->
 

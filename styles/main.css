@@ -41,12 +41,9 @@ header {
   font-size: 45px;
   font-weight: 800; }
 
-.wrapper {
-  min-width: 1100px;
-  height: 250px; }
-
 .w-zero {
   background-color: #1d1f21;
+  min-width: 1100px;
   height: 90px; }
   .w-zero .main-nav {
     margin: 0 auto;
@@ -59,48 +56,18 @@ header {
     margin: 0 auto; }
 
 .app-wrapper {
-  height: 1000px; }
+  background-color: #7298c0;
+  min-height: 1000px; }
 
 .main-btns {
   display: inline-block;
-  padding: 10px;
-  background-color: #FF5F33;
+  margin: 0 auto;
   border: 2px solid yellow;
+  background-color: #ff5f33;
+  padding: 10px 100px;
   text-decoration: none;
   color: #000;
   font-weight: 800; }
-
-.btn-1, .btn-2, .btn-3,
-.btn-2, .btn-3, .btn-4 {
-  padding-right: 100px;
-  padding-left: 100px; }
-
-.app-wrapper {
-  height: 650px;
-  background-color: #7298C0; }
-
-.w1-1, .w1-2, .w2-1, .w2-2,
-.w3-1, .w3-2, .w4-1, .w4-2 {
-  display: inline-block; }
-
-.w-one {
-  height: 400px; }
-
-.w-two {
-  background-color: #7bc3fd; }
-
-.w-three {
-  background-color: #d8cd43;
-  height: 600px; }
-
-.w3-1 img {
-  margin: 0 auto;
-  padding: 20px 30px;
-  width: 70%;
-  height: 70%; }
-
-.w-four {
-  background-color: #7bc3fd; }
 
 footer {
   background-color: #a49f9d;
@@ -139,35 +106,45 @@ footer {
 
 .menu {
   margin: 0 auto;
+  background-color: #21455f;
   padding-top: 40px;
-  background-color: #21455F;
-  color: #F6F6F6; }
+  color: #f6f6f6; }
 
 .post-li {
-  font-family: 'Julee', cursive;
   display: inline-block;
-  padding: 10px;
-  background-color: #FF5F33;
   border: 2px solid yellow;
+  background-color: #ff5f33;
+  padding: 10px;
   text-decoration: none;
+  line-height: 2;
   color: #000;
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 2; }
+  font-family: 'Julee', cursive;
+  font-size: 15px;
+  font-weight: 800; }
 
 .js-items {
   list-style: none; }
 
 .add {
-  background-color: #FD6034; }
+  background-color: #fd6034;
+  text-decoration: none; }
 
 #add-btn {
-  background-color: #FD6034;
-  float: right; }
+  float: right;
+  background-color: #fd6034; }
 
 .item-title {
   text-decoration: underline; }
 
-/* .item-type */
+.item-type {
+  background-color: #b5bbc9; }
+
+.menu-header {
+  margin: 0 auto;
+  padding-bottom: 40px;
+  text-align: center; }
+
+ul {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
