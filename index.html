@@ -25,8 +25,7 @@
 
     <div class="app-wrapper">
 
-      <div class="menu-wrapper">
-        <div class="menu"></div>
+        <div class="menu">
           <script type="text/template" data-template-name="post-li">
             <ul>
               <li class="item-title post-li"><%= item_title %></li>
@@ -36,23 +35,25 @@
               <li class="item-button post-li"><button>Add</button></li>
             </ul>
           </script>
-      </div> <!-- cloing 'menu-wrapper' -->
-
-      <div class="cart-wrapper">
-        <div class="cart"></div>
-        <script type="text/template" data-template-name="cart-li">
-          <ul>
-            <li class="cart-item-title"><%= cart_item_title %></li><hr />
-            <li class="cart-item-price"><%= cart_item_price %></li><hr />
-            <li class="cart-price-total"><%= cart_price_total %></li><hr />
-            <li><a class="submit go-to-checkout" href="checkout.html">Place Order and Checkout</a></li>
-          </ul>
-        </script>
-      </div> <!-- cloing 'cart-wrapper' -->
-
+      </div> <!-- cloing 'menu' -->
     </div> <!-- cloing 'app-wrapper' -->
-
   </div> <!-- cloing 'app-container' -->
+
+
+
+
+
+  <!--     <div class="cart-wrapper">
+    <div class="cart"></div>
+    <script type="text/template" data-template-name="cart-li">
+      <ul>
+        <li class="cart-item-title"><%= cart_item_title %></li><hr />
+        <li class="cart-item-price"><%= cart_item_price %></li><hr />
+        <li class="cart-price-total"><%= cart_price_total %></li><hr />
+        <li><a class="submit go-to-checkout" href="checkout.html">Place Order and Checkout</a></li>
+      </ul>
+    </script>
+  </div> cloing 'cart-wrapper' -->
 
   <footer>
     <div class="footer-left">
