@@ -25,30 +25,18 @@
 
     <div class="app-wrapper">
 
-      <div class="menu-wrapper">
-        <div class="menu"></div>
-          <script type="text/template" data-template-name="post-li">
-            <ul>
-              <li class="item-title post-li"><%= item_title %></li>
-              <li class="item-description post-li"><%= item_description %></li>
-              <li class="item-price post-li"><%= item_price %></li>
-              <li class="item-type post-li"><%= item_type %></li>
-              <li class="item-button post-li"><button>Add</button></li>
-            </ul>
-          </script>
-      </div> <!-- cloing 'menu-wrapper' -->
-
-      <div class="cart-wrapper">
-        <div class="cart"></div>
-        <script type="text/template" data-template-name="cart-li">
+      <div class="checkout-wrapper">
+        <div class="checkout"></div>
+        <script type="text/template" data-template-name="checkout-li">
           <ul>
             <li class="cart-item-title"><%= cart_item_title %></li><hr />
             <li class="cart-item-price"><%= cart_item_price %></li><hr />
             <li class="cart-price-total"><%= cart_price_total %></li><hr />
-            <li><a class="submit go-to-checkout" href="checkout.html">Place Order and Checkout</a></li>
+            <li><button class="edit-cart go-to-editCart-template">Edit Order</button></li>
+            <li><button class="submit-order">Submit Order</button></li>
           </ul>
         </script>
-      </div> <!-- cloing 'cart-wrapper' -->
+      </div> <!-- cloing 'checkout-wrapper' -->
 
     </div> <!-- cloing 'app-wrapper' -->
 
