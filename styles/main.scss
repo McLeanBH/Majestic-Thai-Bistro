@@ -3,6 +3,9 @@ $visual-grid: false;
 $gutter: em(47px);
 @import 'neat/neat';
 
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -164,3 +167,42 @@ footer {
   padding-top: 75px;
   padding-right: 50px;
 }
+
+.menu {
+  margin: 0 auto;
+  padding-top: 40px;
+  background-color: #21455F;
+  color: #F6F6F6;
+}
+
+.post-li {
+  font-family: 'Julee', cursive;
+  display: inline-block;
+  padding: 10px;
+  background-color: #FF5F33;
+  border: 2px solid yellow;
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 2;
+}
+
+.js-items {
+  list-style: none;
+}
+
+.add {
+  background-color: #FD6034;
+}
+
+#add-btn {
+  background-color: #FD6034;
+  float: right;
+}
+
+.item-title {
+  text-decoration: underline;
+}
+
+/* .item-type */

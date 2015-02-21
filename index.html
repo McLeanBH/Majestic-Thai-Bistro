@@ -5,6 +5,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="bower_components/Hover/css/hover-min.css" media="all">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Julee" type="text/css">
 </head>
 <body>
   <header>
@@ -27,12 +28,13 @@
 
         <div class="menu">
           <script type="text/template" data-template-name="post-li">
-            <ul>
-              <li class="item-title post-li"><%= item_title %></li>
-              <li class="item-description post-li"><%= item_description %></li>
-              <li class="item-price post-li"><%= item_price %></li>
-              <li class="item-type post-li"><%= item_type %></li>
-              <li class="item-button post-li"><button>Add</button></li>
+            <ul class=".js-items">
+              <li class="item-title post-li hvr-back-pulse"><%= item_title %></li>
+              <li class="item-description post-li hvr-back-pulse"><%= item_description %></li>
+              <li class="item-price post-li hvr-back-pulse"><%= item_price %></li>
+              <li class="item-type post-li hvr-back-pulse"><%= item_type %></li>
+               <li id="add-btn" class="item-button post-li hvr-back-pulse"><a class="add" href="checkout.html">Add<!-- <button>Add</button> --></li>
+                <hr />
             </ul>
           </script>
       </div> <!-- cloing 'menu' -->
