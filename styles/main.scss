@@ -41,6 +41,101 @@ header {
   font-weight: 800;
 }
 
+.info-container {
+  height: 350px;
+}
+
+.info-left {
+  background-image: url('../img/restaurant.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  width: 450px;
+  height: 250px;
+  margin: 50px 50px;
+  float: left;
+  padding-left: 100px;
+  padding-top: 150px;
+}
+
+.info-right {
+  display: inline-block;
+  width: 650px;
+  margin: 0 auto;
+  float: right;
+  padding-right: 100px;
+
+  p {
+    margin-top: 30px;
+    line-height: 1.2;
+  }
+}
+
+.fill-wrapper {
+  background-color: #B5BBC9;
+  height: 300px;
+
+  .filler-pics {
+    list-style: none;
+  }
+
+  .fill-pics {
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.p {
+  margin: 0;
+}
+
+.p1 {
+  background-image: url('../img/pad-kee-mao.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.p2 {
+  background-image: url('../img/red-curry.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.p3 {
+  background-image: url('../img/padthai.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.p4 {
+  background-image: url('../img/pad-prik.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.p5 {
+  background-image: url('../img/satay.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
 .w-zero {
   background-color: #1d1f21;
   min-width: 1100px;

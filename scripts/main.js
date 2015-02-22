@@ -173,3 +173,8 @@ $.ajaxSetup ({
  //     return this;
  //   }
  // });
+
+ // $('.menu').on('click', function(){
+ //   event.preventDefault();
+ //   $('.app-wrapper').removeClass('hidden');
+ //
