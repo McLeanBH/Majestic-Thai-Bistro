@@ -138,7 +138,7 @@ footer {
   line-height: 2;
   color: #000;
   font-family: 'Julee', cursive;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -189,3 +189,34 @@ ul {
   margin: 0 auto;
   list-style: none;
 }
+
+.admin-left {
+  display: inline-block;
+  height: 300px;
+
+  a {
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+}
+
+.admin-form {
+  margin: 30px 50px;
+  display: inline-block;
+  background-color: #F1A628;
+  padding: 0 300px;
+  border: 1px solid #000;
+
+  .edit-menu {
+    list-style: none;
+  }
+
+  .edit-menu-items {
+    line-height: 2;
+    border: 1px solid #000;
+    padding-top: 5px;
+  }
+}
+h3 {
+  padding-left: 40px;
+ }

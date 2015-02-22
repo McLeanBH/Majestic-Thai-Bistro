@@ -45,19 +45,25 @@
     </div> <!-- cloing 'app-wrapper' -->
   </div> <!-- cloing 'app-container' -->
 
-    <script type="text/template" id="menu-edit-item-template">
-      <form class="edit-menu-form details">
-        <ul class="item-details">
-          <li><label>Title</label><input value="<%= item_title %>" name="title"></li>
-          <li><label>Description</label><input value="<%= item_description %>" name="description"></li>
-          <li><label>Type</label><input value="<%= item_type %>" name="type"></li>
-          <li><label>Price</label><input value="<%= item_price %>" name="price"></li>
-          <hr />
-        </ul>
-        <button type="submit" class="update-menu-item">Update</button>
-      </form>
-    </script>
+    <div class="admin-panel">
+      <div class="admin-left"><a><img src="img/food.png"></a></div>
 
+      <div class="admin-form">
+        <h3>Admin Panel: Edit Menu</h3>
+        <form>
+          <ul class="edit-menu">
+            <hr />
+            <li class="edit-menu-items"><input placeholder="Item-Title"><!-- <label> : Title</label> --></li>
+            <li class="edit-menu-items"><input placeholder="Item-Description"><!-- <label> : Description</label> --></li>
+            <li class="edit-menu-items"><input placeholder="Item-Type"><!-- <label> : Type</label> --></li>
+            <li class="edit-menu-items"><input placeholder="Item-Price"><!-- <label> : Price</label> --></li>
+            <hr />
+            <button type="submit" class="update-menu-item">Update / Add-To-Menu</button>
+            <hr />
+          </ul>
+        </form>
+      </div>
+    </div>
 
   <footer>
     <div class="footer-left">
@@ -85,49 +91,15 @@
 </body>
 </html>
 
-
-  <!--   <div class="app-wrapper">
-    <div class="menu">
-      <div class="sideBar"></div>
-        <script type="text/template" data-template-name="post-li">
-          <ul>
-            <li class="item-title post-li">$<%= item_title %></li>
-            <li class="item-description post-li"><%= item_description %></li>
-            <li class="item-price post-li"><%= item_price %></li>
-            <li class="item-type post-li"><%= item_type %></li>
-            <li class="item-button post-li"><button>Add</button></li>
-          </ul>
-        </script>
-    </div> cloing 'menu'
-      <script type="text/template" data-template-name="post-menu-item">
-        <form>
-          <h1>Post New Item To Menu</h1>
-            <hr />
-          <input class="post-title" type="text" placeholder="Item Title">
-            <hr />
-          <input class="post-description" type="text" placeholder="Item Description">
-            <hr />
-          <input class="post-price" type="text" placeholder="Item Price">
-            <hr />
-          <input class="post-type" type="text" placeholder="Item Menu Type">
-            <hr />
-          <button class="submit-item">Submit</button>
-        </form>
-      </script>
-  </div> cloing 'app-wrapper'
-    </div> cloing 'app-container' -->
-
-
-    <!-- <div class="cart-wrapper">
-      <div class="cart"></div>
-      <script type="text/template" data-template-name="cart-li">
-        <ul class="cart-list">
-          <li class="cart-item-title"><%= cart_item_title %></li><hr />
-          <li class="cart-item-price"><%= cart_item_price %></li><hr />
-          <li class="cart-price-total"><%= cart_price_total %></li><hr />
-          <li><a class="submit go-to-checkout" href="checkout.html">Place Order and Checkout</a></li>
-        </ul>
-          <hr />
-          <p>** Total price before taxes **</p>
-      </script>
-    </div> -->
+<!--   <script type="text/template" id="menu-edit-item-template">
+  <form class="edit-menu-form details">
+    <ul class="item-details">
+      <li><label>Title</label><input value="<%= item_title %>" name="title"></li>
+      <li><label>Description</label><input value="<%= item_description %>" name="description"></li>
+      <li><label>Type</label><input value="<%= item_type %>" name="type"></li>
+      <li><label>Price</label><input value="<%= item_price %>" name="price"></li>
+      <hr />
+    </ul>
+    <button type="submit" class="update-menu-item">Update</button>
+  </form>
+</script>  -->
