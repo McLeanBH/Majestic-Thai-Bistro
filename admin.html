@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <title>Admin | Majestic Thai Bistro</title>
   <link rel="stylesheet" href="bower_components/Hover/css/hover-min.css" media="all">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Julee" type="text/css">
 </head>
 <body>
   <header>
@@ -13,70 +14,59 @@
   </header>
 
   <div id="app-container">
-
     <div class="wrapper w-zero">
       <ul class="main-nav">
-        <li class="main-btns btn-1 hvr-back-pulse"><a>Starters</a></li>
-        <li class="main-btns btn-2 hvr-back-pulse"><a>Entrees</a></li>
-        <li class="main-btns btn-3 hvr-back-pulse"><a>Curry</a></li>
-        <li class="main-btns btn-4 hvr-back-pulse"><a>Other</a></li>
+        <li class="main-btns btn-1 hvr-back-pulse"><a href="index.html">Home</a></li>
+        <li class="main-btns btn-2 hvr-back-pulse"><a href="index.html">Menu</a></li>
+        <li class="main-btns btn-3 hvr-back-pulse"><a href="admin.html">Admin Panel</a></li>
+        <li class="main-btns btn-4 hvr-back-pulse"><a href="checkout.html">Submit Order</a></li>
       </ul>
-    </div>
+    </div> <!-- cloing 'w-zero' -->
 
     <div class="app-wrapper">
-
-      <div class="menu">
-
-        <div class="sideBar"></div>
-
+        <div class="menu">
+          <h1 class="menu-header">Majestic Thai</h1>
+          <ul class="menu-nav">
+            <li class="food menu-selection">Selection</li>
+            <li class="food menu-price">Price</li>
+            <li class="food menu-add">Add To Cart</li>
+          </ul>
           <script type="text/template" data-template-name="post-li">
-            <ul>
-              <li class="item-title post-li">$<%= item_title %></li>
-              <li class="item-description post-li"><%= item_description %></li>
-              <li class="item-price post-li"><%= item_price %></li>
+            <ul class=".js-items">
+              <li class="item-title hvr-reveal hvr-grow-rotate post-li"><%= item_title %></li>
+              <li class="item-description hvr-rectangle-out post-li"><%= item_description %></li>
               <li class="item-type post-li"><%= item_type %></li>
-              <li class="item-button post-li"><button>Add</button></li>
+              <li class="item-price hvr-underline-from-center post-li"><%= item_price %></li>
+              <li id="add-btn" class="item-button hvr-rectangle-out post-li"><a class="add" href="checkout.html"><button>Add</button></li>
+                <hr />
             </ul>
           </script>
-
       </div> <!-- cloing 'menu' -->
-
-        <script type="text/template" data-template-name="post-menu-item">
-          <form>
-            <h1>Post New Item To Menu</h1>
-              <hr />
-            <input class="post-title" type="text" placeholder="Item Title">
-              <hr />
-            <input class="post-description" type="text" placeholder="Item Description">
-              <hr />
-            <input class="post-price" type="text" placeholder="Item Price">
-              <hr />
-            <input class="post-type" type="text" placeholder="Item Menu Type">
-              <hr />
-            <button class="submit-item">Submit</button>
-          </form>
-        </script>
-
-      <div class="cart">
-        <ul>
-          <li class="cart-item-title"></li>
-          <li class="cart-item-description"></li>
-          <li class="cart-item-price"></li>
-        </ul>
-      </div> <!-- cloing 'cart' -->
-
     </div> <!-- cloing 'app-wrapper' -->
-
   </div> <!-- cloing 'app-container' -->
+
+    <script type="text/template" id="menu-edit-item-template">
+      <form class="edit-menu-form details">
+        <ul class="item-details">
+          <li><label>Title</label><input value="<%= item_title %>" name="title"></li>
+          <li><label>Description</label><input value="<%= item_description %>" name="description"></li>
+          <li><label>Type</label><input value="<%= item_type %>" name="type"></li>
+          <li><label>Price</label><input value="<%= item_price %>" name="price"></li>
+          <hr />
+        </ul>
+        <button type="submit" class="update-menu-item">Update</button>
+      </form>
+    </script>
+
 
   <footer>
     <div class="footer-left">
       <ul class="list-left">
-        <li class="site-map-items"><a href="one1">One1</a></li>
-        <li class="site-map-items"><a href="one2">Two2</a></li>
-        <li class="site-map-items"><a href="one3">Three3</a></li>
+        <li class="site-map-items"><a href="index.html">Home</a></li>
+        <li class="site-map-items"><a href="one2">Menu</a></li>
+        <li class="site-map-items"><a href="one3">Cart</a></li>
       </ul>
-    </div>
+    </div> <!-- 'footer-left' -->
 
     <div class="footer-right">
       <ul class="list-right">
@@ -84,12 +74,60 @@
         <li class="nav-foot"><a href="two2">Nav 2</a></li>
         <li class="nav-foot"><a href="two3">Nav 3</a></li>
       </ul>
-    </div>
+    </div> <!-- 'footer-right' -->
   </footer>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
+
 </body>
 </html>
+
+
+  <!--   <div class="app-wrapper">
+    <div class="menu">
+      <div class="sideBar"></div>
+        <script type="text/template" data-template-name="post-li">
+          <ul>
+            <li class="item-title post-li">$<%= item_title %></li>
+            <li class="item-description post-li"><%= item_description %></li>
+            <li class="item-price post-li"><%= item_price %></li>
+            <li class="item-type post-li"><%= item_type %></li>
+            <li class="item-button post-li"><button>Add</button></li>
+          </ul>
+        </script>
+    </div> cloing 'menu'
+      <script type="text/template" data-template-name="post-menu-item">
+        <form>
+          <h1>Post New Item To Menu</h1>
+            <hr />
+          <input class="post-title" type="text" placeholder="Item Title">
+            <hr />
+          <input class="post-description" type="text" placeholder="Item Description">
+            <hr />
+          <input class="post-price" type="text" placeholder="Item Price">
+            <hr />
+          <input class="post-type" type="text" placeholder="Item Menu Type">
+            <hr />
+          <button class="submit-item">Submit</button>
+        </form>
+      </script>
+  </div> cloing 'app-wrapper'
+    </div> cloing 'app-container' -->
+
+
+    <!-- <div class="cart-wrapper">
+      <div class="cart"></div>
+      <script type="text/template" data-template-name="cart-li">
+        <ul class="cart-list">
+          <li class="cart-item-title"><%= cart_item_title %></li><hr />
+          <li class="cart-item-price"><%= cart_item_price %></li><hr />
+          <li class="cart-price-total"><%= cart_price_total %></li><hr />
+          <li><a class="submit go-to-checkout" href="checkout.html">Place Order and Checkout</a></li>
+        </ul>
+          <hr />
+          <p>** Total price before taxes **</p>
+      </script>
+    </div> -->
