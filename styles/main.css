@@ -42,7 +42,12 @@ header {
   font-weight: 800; }
 
 .info-container {
-  height: 350px; }
+  background-color: #000;
+  height: 350px;
+  color: #fff; }
+
+.menu-hyperlink {
+  color: red; }
 
 .info-left {
   background-image: url("../img/restaurant.png");
@@ -68,14 +73,17 @@ header {
     line-height: 1.2; }
 
 .fill-wrapper {
-  background-color: #B5BBC9;
+  background-color: #fff;
   height: 300px; }
   .fill-wrapper .filler-pics {
-    list-style: none; }
+    list-style: none;
+    margin-left: 25px; }
   .fill-wrapper .fill-pics {
     display: inline-block;
-    height: 250px;
-    width: 250px; }
+    margin: 0 auto;
+    height: 200px;
+    width: 235px;
+    padding-left: 20px; }
 
 .p {
   margin: 0; }
@@ -121,7 +129,7 @@ header {
   width: 300px; }
 
 .w-zero {
-  background-color: #1d1f21;
+  background-color: #D42B1F;
   min-width: 1100px;
   height: 90px; }
   .w-zero .main-nav {
@@ -142,14 +150,16 @@ header {
   display: inline-block;
   margin: 0 auto;
   border: 2px solid yellow;
-  background-color: #ff5f33;
+  background-color: #D4AE35;
   padding: 10px 100px;
   text-decoration: none;
   color: #000;
   font-weight: 800; }
+  .main-btns a {
+    color: #000; }
 
 footer {
-  background-color: #a49f9d;
+  background-color: #D42B1F;
   height: 150px; }
   footer ul {
     margin: 0;
@@ -166,8 +176,13 @@ footer {
 .site-map-items {
   display: inline-block;
   cursor: pointer;
-  padding-top: 75px;
-  padding-left: 50px; }
+  margin-top: 75px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #D4AE35;
+  border: 2px solid #000; }
+  .site-map-items a {
+    color: #000; }
 
 .footer-right {
   display: inline-block;
@@ -175,7 +190,8 @@ footer {
   margin: 0;
   list-style: none; }
   .footer-right a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000; }
 
 .nav-foot {
   display: inline-block;
@@ -261,5 +277,13 @@ ul {
 
 h3 {
   padding-left: 40px; }
+
+.hidden {
+  display: none; }
+
+.copy {
+  margin: 0 auto;
+  padding-top: 115px;
+  padding-left: 45%; }
 
 /*# sourceMappingURL=main.css.map */

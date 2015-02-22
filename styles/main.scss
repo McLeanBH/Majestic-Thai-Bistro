@@ -42,7 +42,13 @@ header {
 }
 
 .info-container {
+  background-color: #000;
   height: 350px;
+  color: #fff;
+}
+
+.menu-hyperlink {
+  color: red;
 }
 
 .info-left {
@@ -73,17 +79,20 @@ header {
 }
 
 .fill-wrapper {
-  background-color: #B5BBC9;
+  background-color: #fff;
   height: 300px;
 
   .filler-pics {
     list-style: none;
+    margin-left: 25px;
   }
 
   .fill-pics {
     display: inline-block;
-    height: 250px;
-    width: 250px;
+    margin: 0 auto;
+    height: 200px;
+    width: 235px;
+    padding-left: 20px;
   }
 }
 
@@ -137,7 +146,7 @@ header {
 }
 
 .w-zero {
-  background-color: #1d1f21;
+  background-color: #D42B1F;
   min-width: 1100px;
   height: 90px;
 
@@ -164,15 +173,19 @@ header {
   display: inline-block;
   margin: 0 auto;
   border: 2px solid yellow;
-  background-color: #ff5f33;
+  background-color: #D4AE35;
   padding: 10px 100px;
   text-decoration: none;
   color: #000;
   font-weight: 800;
+
+  a {
+    color: #000;
+  }
 }
 
 footer {
-  background-color: #a49f9d;
+  background-color: #D42B1F;
   height: 150px;
 
   ul {
@@ -195,8 +208,15 @@ footer {
 .site-map-items {
   display: inline-block;
   cursor: pointer;
-  padding-top: 75px;
+  margin-top: 75px;
   padding-left: 50px;
+  padding-right: 50px;
+  background-color: #D4AE35;
+  border: 2px solid #000;
+
+  a {
+    color: #000;
+  }
 }
 
 .footer-right {
@@ -207,6 +227,7 @@ footer {
 
   a {
     text-decoration: none;
+    color: #000;
   }
 }
 
@@ -312,6 +333,16 @@ ul {
     padding-top: 5px;
   }
 }
+
 h3 {
   padding-left: 40px;
+ }
+
+.hidden {
+  display: none;
+}
+ .copy {
+   margin: 0 auto;
+   padding-top: 115px;
+   padding-left: 45%;
  }
