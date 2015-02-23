@@ -79,6 +79,7 @@ header {
 }
 
 .fill-wrapper {
+  margin-top: 20px;
   background-color: #fff;
   height: 300px;
 
@@ -172,7 +173,7 @@ header {
 .main-btns {
   display: inline-block;
   margin: 0 auto;
-  border: 2px solid yellow;
+  border: 2px solid #000;
   background-color: #D4AE35;
   padding: 10px 100px;
   text-decoration: none;
@@ -185,6 +186,7 @@ header {
 }
 
 footer {
+  margin-top: 20px;
   background-color: #D42B1F;
   height: 150px;
 
@@ -309,18 +311,23 @@ ul {
 .admin-left {
   display: inline-block;
   height: 300px;
+  width: 520px;
 
   a {
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 10px;
+
+    img {
+      height: 318px;
+    }
   }
 }
 
 .admin-form {
-  margin: 30px 50px;
+  margin: 10px 20px 80px 20px;
   display: inline-block;
-  background-color: #F1A628;
-  padding: 0 300px;
+  background-color: #D42B1F;
+  padding: 0 200px 20px;
   border: 1px solid #000;
 
   .edit-menu {
@@ -329,13 +336,34 @@ ul {
 
   .edit-menu-items {
     line-height: 2;
-    border: 1px solid #000;
     padding-top: 5px;
+    text-align: center;
   }
 }
 
-h3 {
+hr {
+  margin: 2px;
+}
+
+.input-title,
+.input-des,
+.input-type,
+.input-price {
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.update-menu-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+.admin-head {
+  text-decoration: underline;
   padding-left: 40px;
+  margin: 4px auto;
  }
 
 .hidden {
@@ -344,5 +372,82 @@ h3 {
  .copy {
    margin: 0 auto;
    padding-top: 115px;
-   padding-left: 45%;
+   display: inline-block;
+   font-size: 12px;
  }
+
+
+.footer-right {
+   display: inline-block;
+}
+
+.quick {
+  list-style: none;
+  padding-top: 30px;
+  padding-right: 150px;
+}
+
+.quick-ref {
+  line-height: 1.2;
+  top: 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+.app-wrapper-cart {
+  height: 450px;
+  background-color: #6F6D75;
+  color: #000;
+  font-weight: 900;
+}
+
+.static-cart {
+  margin: 10px auto;
+  height: 350px;
+}
+
+.view-and-edit-cart {
+  margin: 0 auto;
+}
+
+.cart-head {
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.cart-list {
+  list-style-type: thai;
+  padding-left: 250px;
+  padding-right: 250px;
+  line-height: 3;
+
+}
+
+.cart-items {
+  margin-left: 75px;
+
+}
+
+.place-order-cart-button {
+  margin: 0 auto;
+  float: right;
+  margin-top: 15px;
+}
+
+.edit-quant {
+  width: 80px;
+  margin-left: 100px
+}
+
+.edit-item-ordered {
+  margin-left: 50px;
+}
+
+.subtotal-before-taxes,
+.total-order-cost {
+  text-align: right;
+}

@@ -19,9 +19,30 @@
         <li class="main-btns btn-1 hvr-back-pulse"><a href="index.html">Home</a></li>
         <li class="main-btns btn-2 hvr-back-pulse"><a href="index.html">Menu</a></li>
         <li class="main-btns btn-3 hvr-back-pulse"><a href="admin.html">Admin Panel</a></li>
-        <li class="main-btns btn-4 hvr-back-pulse"><a href="checkout.html">Submit Order</a></li>
+        <li class="main-btns btn-4 hvr-back-pulse"><a href="checkout.html">Cart / Checkout</a></li>
       </ul>
     </div> <!-- cloing 'w-zero' -->
+
+    <div class="admin-panel">
+      <div class="admin-left"><a><img src="img/food.png"></a></div>
+      <div class="admin-form">
+        <h3 class="admin-head">Admin Panel: Edit Menu</h3>
+        <form>
+          <ul class="edit-menu">
+            <li class="edit-menu-items title-edit"><input class="input-title" placeholder="Item-Title"><!-- <label> : Title</label> --></li>
+              <hr />
+            <li class="edit-menu-items desc-edit"><input class="input-des" placeholder="Item-Description"><!-- <label> : Description</label> --></li>
+              <hr />
+            <li class="edit-menu-items type-edit"><input class="input-type" placeholder="Item-Type"><!-- <label> : Type</label> --></li>
+              <hr />
+            <li class="edit-menu-items price-edit"><input class="input-price" placeholder="Item-Price"><!-- <label> : Price</label> --></li>
+              <hr />
+            <button type="submit" class="update-menu-item">Update / Add-To-Menu</button>
+              <hr />
+          </ul>
+        </form>
+      </div>
+    </div>
 
     <div class="app-wrapper">
         <div class="menu">
@@ -45,26 +66,6 @@
     </div> <!-- cloing 'app-wrapper' -->
   </div> <!-- cloing 'app-container' -->
 
-    <div class="admin-panel">
-      <div class="admin-left"><a><img src="img/food.png"></a></div>
-
-      <div class="admin-form">
-        <h3>Admin Panel: Edit Menu</h3>
-        <form>
-          <ul class="edit-menu">
-            <hr />
-            <li class="edit-menu-items"><input placeholder="Item-Title"><!-- <label> : Title</label> --></li>
-            <li class="edit-menu-items"><input placeholder="Item-Description"><!-- <label> : Description</label> --></li>
-            <li class="edit-menu-items"><input placeholder="Item-Type"><!-- <label> : Type</label> --></li>
-            <li class="edit-menu-items"><input placeholder="Item-Price"><!-- <label> : Price</label> --></li>
-            <hr />
-            <button type="submit" class="update-menu-item">Update / Add-To-Menu</button>
-            <hr />
-          </ul>
-        </form>
-      </div>
-    </div>
-
     <footer>
       <div class="footer-left">
         <ul class="list-left">
@@ -75,6 +76,16 @@
         </ul>
       </div>
       <p class="copy">&copy; 2015 Majestic Thai Bistro</p>
+
+      <div class="footer-right">
+        <ul class="quick">
+          <li class="quick-ref">Majestic Thai Bistro</li>
+          <li class="quick-ref">129 West Main Street</li>
+          <li class="quick-ref">Greenville, SC, 29601</li>
+          <li class="quick-ref">(864) 630 - 9266</li>
+          <li class="quick-ref">Hours: Mon.-Sat. 11am-11pm</li>
+        </ul>
+      </div>
     </footer>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
