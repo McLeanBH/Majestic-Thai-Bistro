@@ -9,4 +9,4 @@ notes* cart is currently/temporarily static. Will render template after linked u
 
 pushed to the web via divshot on 2/22/15 @ 9pm
 
-http://development.majestic-thai.divshot.io/
+http://development.majestic-thai-bistro.divshot.io/
