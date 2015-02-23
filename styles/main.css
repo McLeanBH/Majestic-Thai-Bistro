@@ -325,7 +325,7 @@ hr {
   color: #fff; }
 
 .app-wrapper-cart {
-  height: 450px;
+  height: 500px;
   background-color: #6F6D75;
   color: #000;
   font-weight: 900; }
@@ -363,8 +363,12 @@ hr {
   width: 80px;
   margin-left: 100px; }
 
+.delete-cart-item,
 .edit-item-ordered {
   margin-left: 50px; }
+
+.pickup-or-delivery {
+  text-align: right; }
 
 .subtotal-before-taxes,
 .total-order-cost {

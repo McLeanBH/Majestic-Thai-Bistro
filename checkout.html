@@ -29,17 +29,24 @@
         <h3 class="cart-head">Please Review Your Order For Accuracy Before Submitting</h3>
             <hr />
         <ul class="cart-list">
-          <li class="cart-items cart-item-title">Pad Thai (1): $10.95                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button></li> <!-- in actual template, will not have 'hard-coded' orders, and this line will be title of item added to cart -->
+          <li class="cart-items cart-item-title">Pad Thai (1): $10.95                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button><button class="delete-cart-item">* Remove Item *</button></li> <!-- in actual template, will not have 'hard-coded' orders, and this line will be title of item added to cart -->
             <hr />
-          <li class="cart-items cart-item-price">Green Curry (1): $9.50                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button></li> <!-- in template, this line would be price of individual items ordered -->
+          <li class="cart-items cart-item-price">Green Curry (1): $9.50                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button><button class="delete-cart-item">* Remove Item *</button></li> <!-- in template, this line would be price of individual items ordered -->
             <hr />
-          <li class="cart-items cart-total-price">Nam Sod - Chicken (1): $5.95                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button></li> <!-- in template will have line for subtotal (before taxes) -->
+          <li class="cart-items cart-total-price">Nam Sod - Chicken (1): $5.95                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button><button class="delete-cart-item">* Remove Item *</button></li> <!-- in template will have line for subtotal (before taxes) -->
             <hr />
-          <li class="cart-items cart-item-title">Wonton Soup (1): $8.95                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button></li> <!-- this line is just added for presentation purposes, so more items in cart -->
+          <li class="cart-items cart-item-title">Wonton Soup (1): $8.95                    <input class="edit-quant" placeholder="Edit Quantity"><button class="edit-item-ordered">* Edit Selection *</button><button class="delete-cart-item">* Remove Item *</button></li> <!-- this line is just added for presentation purposes, so more items in cart -->
             <hr />
           <li class="cart-items subtotal-before-taxes">* Subtotal: Before 7% State Sales Tax:     $35.35</li>
             <hr />
           <li class="cart-items total-order-cost">Total Order Cost:     $37.83</li>
+            <hr />
+          <li class="cart-items pickup-or-delivery">
+            <select class="dropdown">
+              <option value="pick-up">Pick-Up</option>
+              <option value="delivery">Delivery</option>
+            </select>
+          </li>
             <hr />
           <button type="submit" class="place-order-cart-button">Submit Order</button>
         </ul>
